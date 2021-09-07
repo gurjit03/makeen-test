@@ -1,13 +1,13 @@
-export type Status = "request" | "running" | "done";: 
+export type Status = "request" | "running" | "done";
 
 export interface Project {
-    seq: number;
     id: string;
+    seq: number;
     name: string;
     status: Status;
     duration: {
-        start: Date;
-        end: Date;
+        start: string;
+        end: string;
     };
     description: string;
 }
