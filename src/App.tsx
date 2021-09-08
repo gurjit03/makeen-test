@@ -1,11 +1,12 @@
 import React from 'react';
 
-function App() {
+import AppBar from './components/AppBar/AppBar';
+import HomePage from './pages/Homepage/Home.page';
+
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        COMATCH FRONTEND TEST
-      </header>
+      <HomePage />
     </div>
   );
 }

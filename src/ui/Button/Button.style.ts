@@ -1,17 +1,19 @@
+
 import styled, {css} from 'styled-components';
 import { colors, verticalSpacing } from '../../config/jss';
-import { Button as ButtonProps } from './Button.interface';
+import { Button as ButtonProps, Variant } from './Button.interface';
 
-
-const variantOptions = {
+const variantOptions: any = {
     contained: {
         primary: {
             backgroundColor: colors.primary,
-            color: colors.white
+            color: colors.white,
+            borderColor: 'transparent'
         },
         secondary: {
             backgroundColor: colors.secondary,
-            color: colors.white
+            color: colors.white,
+            borderColor: 'transparent'
         }
     },
     outlined: {
@@ -36,16 +38,16 @@ export const Wrapper = styled.button<ButtonProps>`
   border: 2px solid;
   border-radius: ${verticalSpacing}px;
   display: inline-block;
-  margin-bottom: ${props => props.marginBottom || 09}px
+  margin-bottom: ${props => props.marginBottom || 0}px
   &:hover {
     cursor: pointer;
   }
-   ${({ variant }) =>
+   ${({ variant, color: buttonColor }) =>
     variant &&
     variantOptions[variant] &&
     css`
-       background-color: ${variantOptions[variant].backgroundColor};
-       color: ${variantOptions[variant].color};
-       border-color: ${variantOptions[variant].borderColor}
+       background-color: ${variantOptions[variant][buttonColor].backgroundColor};
+       color: ${variantOptions[variant][buttonColor].color};
+       border-color: ${variantOptions[variant][buttonColor].borderColor}
    `}
 `;

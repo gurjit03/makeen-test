@@ -1,10 +1,10 @@
-type Variant = 'contained'| 'outlined'
-type Color = 'primary' | 'secondary'
+export type Variant = 'contained'| 'outlined'
+export type Color = 'primary' | 'secondary'
 
 export interface Button {
     variant: Variant;
     color: Color;
-    onClick?: () => {};
+    onClick?: () => void;
     marginBottom?: number;
     children: React.ReactChild
 }
