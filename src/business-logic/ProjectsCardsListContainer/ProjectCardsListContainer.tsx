@@ -1,9 +1,9 @@
 import React from 'react';
 import ProjectCardsList from '../../components/ProjectCardsList/ProjectCardsList'
-import Drawer from '../../components/Drawer/Drawer';
 import { API_URL } from '../../config/app';
 
 import { Project } from '../../interfaces/Project.interface';
+import { Drawer } from '../../ui/';
 import { ProjectCardsWrapper } from './ProjectCardsListContainer.style';
 
 const ProjectCardsListContainer: React.FC = () => {
@@ -23,12 +23,19 @@ const ProjectCardsListContainer: React.FC = () => {
 
     const handleProjectClick = (projectId: string) => () => {
         setProjectId(projectId)
+        setShowProjectDrawer(true);
         console.log(projectId, "PROJECT ID..")
+    }
+
+    const handleDrawerClose = () => {
+        setProjectId('');
+        setShowProjectDrawer(false);
     }
 
     React.useEffect(() => {
         fetchProjects();
     }, [])
+
 
     return (
         <>
@@ -37,7 +44,7 @@ const ProjectCardsListContainer: React.FC = () => {
                     <p>LOADING...</p> :
                     <ProjectCardsList projects={projects} onProjectClick={handleProjectClick} />}
             </ProjectCardsWrapper>
-            {showProjectDrawer && <Drawer />}
+            <Drawer isOpen={showProjectDrawer}>HELP</Drawer>
         </>
     )
 }
