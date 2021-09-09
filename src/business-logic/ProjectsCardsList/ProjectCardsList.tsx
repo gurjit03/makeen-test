@@ -1,30 +1,22 @@
 import React from 'react';
 import ProjectCardsListUI from '../../components/ProjectCardsList/ProjectCardsList'
 import { API_URL } from '../../config/app';
+import useFetch from '../../hooks/useFetch';
 
 import { Project } from '../../interfaces/Project.interface';
 import { Drawer } from '../../ui';
+import ProjectDetails from '../ProjectDetails/ProjectDetails';
 import { ProjectCardsWrapper } from './ProjectCardsList.style';
 
 const ProjectCardsList: React.FC = () => {
     const [showProjectDrawer, setShowProjectDrawer] = React.useState<boolean>(false);
     const [projectId, setProjectId] = React.useState<string>('');
-    const [isLoading, setIsLoading] = React.useState<boolean>(false);
-    const [projects, setProjects] = React.useState<Project[]>([]);
-
-    const fetchProjects = async () => {
-        setIsLoading(true);
-        const PROJECTS_API_URL = `${API_URL}/projects`
-        const response = await fetch(PROJECTS_API_URL)
-        const projects: Project[] = await response.json();
-        setProjects(projects);
-        setIsLoading(false);
-    }
+    const PROJECTS_API_URL = `${API_URL}/projects`
+    const { data: projects, status } = useFetch<Project[]>(PROJECTS_API_URL);
 
     const handleProjectClick = (projectId: string) => () => {
         setProjectId(projectId)
         setShowProjectDrawer(true);
-        console.log(projectId, "PROJECT ID..")
     }
 
     const handleDrawerClose = () => {
@@ -32,19 +24,18 @@ const ProjectCardsList: React.FC = () => {
         setShowProjectDrawer(false);
     }
 
-    React.useEffect(() => {
-        fetchProjects();
-    }, [])
-
+    const isLoading = status === 'fetching';
 
     return (
         <>
             <ProjectCardsWrapper>
                 {isLoading ?
                     <p>LOADING...</p> :
-                    <ProjectCardsListUI projects={projects} onProjectClick={handleProjectClick} />}
+                    <ProjectCardsListUI projects={projects || []} onProjectClick={handleProjectClick} />}
             </ProjectCardsWrapper>
-            <Drawer isOpen={showProjectDrawer} onClose={handleDrawerClose}>HELP</Drawer>
+            <Drawer isOpen={showProjectDrawer} onClose={handleDrawerClose}>
+                <ProjectDetails projectId={projectId} />
+            </Drawer>
         </>
     )
 }
