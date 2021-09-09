@@ -1,8 +1,8 @@
 import React from 'react';
-import { Consultant } from '../../interfaces/Consultant.interface';
+import { Consultant as IConsulant } from '../../interfaces/Consultant.interface';
 import { CWrapper, CAvatar, CName } from './Consultant.style';
 
-interface ConsultantProps extends Consultant {
+interface ConsultantProps extends IConsulant {
     wrapperComponent?: React.FC
 }
 

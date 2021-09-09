@@ -24,17 +24,18 @@ const ProjectCardsList: React.FC = () => {
         setShowProjectDrawer(false);
     }
 
-    const isLoading = status === 'fetching';
+    const isFetchingData = status === 'fetching';
+    console.log(projects, 'PROJECTS>..')
 
     return (
         <>
             <ProjectCardsWrapper>
-                {isLoading ?
+                {isFetchingData ?
                     <p>LOADING...</p> :
                     <ProjectCardsListUI projects={projects || []} onProjectClick={handleProjectClick} />}
             </ProjectCardsWrapper>
             <Drawer isOpen={showProjectDrawer} onClose={handleDrawerClose}>
-                <ProjectDetails projectId={projectId} />
+                {projectId && <ProjectDetails projectId={projectId} />}
             </Drawer>
         </>
     )

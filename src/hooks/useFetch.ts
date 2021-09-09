@@ -42,6 +42,8 @@ const useFetch = <T = unknown>(url?: string, options?: RequestInit) => {
     fetchData()
   }, [url])
 
+  console.log(cache, url,"CACHE, URL")
+
   return {data, status}
 }
 

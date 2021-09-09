@@ -11,7 +11,6 @@ interface ProjectCardProps extends ProjectProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
     const {
-        id,
         name,
         status,
         duration,

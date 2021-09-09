@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectDetailsUI from '../../components/ProjectDetails/ProjectDetails';
-import { API_URL } from '../../config/app';
 import useFetch from '../../hooks/useFetch';
+import { API_URL } from '../../config/app';
 import { Project } from '../../interfaces/Project.interface';
 
 interface ProjectDetailsProps {

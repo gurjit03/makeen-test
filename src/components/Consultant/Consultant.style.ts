@@ -9,6 +9,8 @@ export const CWrapper = styled.li`
 `;
 
 export const CAvatar = styled.img`
+    max-width: 60px;
+    border-radius: 50%;
     display: inline-block;
     margin-right: ${verticalSpacing * 2}px;
 `

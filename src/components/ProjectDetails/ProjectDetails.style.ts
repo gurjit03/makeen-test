@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { colors, fontSizes, verticalSpacing } from '../../config/jss';
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+    padding: ${verticalSpacing * 4}px;
+`;
 
 export const ProjectStatus = styled.p`
     font-size: ${fontSizes.xSmall}px;

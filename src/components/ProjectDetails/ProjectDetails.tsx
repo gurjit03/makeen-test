@@ -15,8 +15,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = (props) => {
         consultants = []
     } = props;
     const projectStatusColor = React.useMemo(() => getColorsForStatus(status), [status]);
-    const projectStartDate = React.useMemo(() => getProperDate(duration.start), [duration.start]);
-    const projectEndDate = React.useMemo(() => getProperDate(duration.end), [duration.end]);
+    const projectStartDate = React.useMemo(() => getProperDate(duration.start), [duration, duration.start]);
+    const projectEndDate = React.useMemo(() => getProperDate(duration.end), [duration, duration.end]);
     const allConsultants = React.useMemo(() => consultants.map(consultant => <Consultant key={consultant.id} {...consultant} />), [consultants])
     return (
         <Wrapper>
