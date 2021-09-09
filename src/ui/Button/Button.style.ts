@@ -1,33 +1,32 @@
-
-import styled, {css} from 'styled-components';
-import { colors, verticalSpacing } from '../../config/jss';
-import { Button as ButtonProps, Variant } from './Button.interface';
+import styled, { css } from 'styled-components'
+import { colors, verticalSpacing } from '../../config/jss'
+import { Button as ButtonProps, Variant } from './Button.interface'
 
 const variantOptions: any = {
-    contained: {
-        primary: {
-            backgroundColor: colors.primary,
-            color: colors.white,
-            borderColor: 'transparent'
-        },
-        secondary: {
-            backgroundColor: colors.secondary,
-            color: colors.white,
-            borderColor: 'transparent'
-        }
-    },
-    outlined: {
-        primary: {
-            backgroundColor: colors.white,
-            borderColor: colors.primary,
-            color: colors.primary
-        },
-        secondary: {
-            backgroundColor: colors.white,
-            borderColor: colors.secondary,
-            color: colors.secondary
-        }
-    }
+	contained: {
+		primary: {
+			backgroundColor: colors.primary,
+			color: colors.white,
+			borderColor: 'transparent',
+		},
+		secondary: {
+			backgroundColor: colors.secondary,
+			color: colors.white,
+			borderColor: 'transparent',
+		},
+	},
+	outlined: {
+		primary: {
+			backgroundColor: colors.white,
+			borderColor: colors.primary,
+			color: colors.primary,
+		},
+		secondary: {
+			backgroundColor: colors.white,
+			borderColor: colors.secondary,
+			color: colors.secondary,
+		},
+	},
 }
 
 export const Wrapper = styled.button<ButtonProps>`
@@ -43,11 +42,11 @@ export const Wrapper = styled.button<ButtonProps>`
     cursor: pointer;
   }
    ${({ variant, color: buttonColor }) =>
-    variant &&
-    variantOptions[variant] &&
-    css`
-       background-color: ${variantOptions[variant][buttonColor].backgroundColor};
-       color: ${variantOptions[variant][buttonColor].color};
-       border-color: ${variantOptions[variant][buttonColor].borderColor}
-   `}
-`;
+				variant &&
+				variantOptions[variant] &&
+				css`
+					background-color: ${variantOptions[variant][buttonColor].backgroundColor};
+					color: ${variantOptions[variant][buttonColor].color};
+					border-color: ${variantOptions[variant][buttonColor].borderColor};
+				`}
+`
