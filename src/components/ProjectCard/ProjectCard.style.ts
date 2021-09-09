@@ -7,7 +7,6 @@ export const Wrapper = styled.article`
     border: 2px solid ${colors.accent};
     background-color: ${colors.white};
     max-width: 200px;
-    max-height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;

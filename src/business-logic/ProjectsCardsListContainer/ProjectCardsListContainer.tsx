@@ -44,7 +44,7 @@ const ProjectCardsListContainer: React.FC = () => {
                     <p>LOADING...</p> :
                     <ProjectCardsList projects={projects} onProjectClick={handleProjectClick} />}
             </ProjectCardsWrapper>
-            <Drawer isOpen={showProjectDrawer}>HELP</Drawer>
+            <Drawer isOpen={showProjectDrawer} onClose={handleDrawerClose}>HELP</Drawer>
         </>
     )
 }

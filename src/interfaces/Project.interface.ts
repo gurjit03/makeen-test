@@ -1,5 +1,6 @@
-export type Status = "request" | "running" | "done";
+import { Consultant } from "./Consultant.interface";
 
+export type Status = "request" | "running" | "done";
 export interface Project {
     id: string;
     seq: number;
@@ -10,5 +11,6 @@ export interface Project {
         end: string;
     };
     description: string;
+    consultants?: Consultant[];
 }
 

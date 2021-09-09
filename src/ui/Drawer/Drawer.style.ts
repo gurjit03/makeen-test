@@ -4,7 +4,7 @@ import { colors } from '../../config/jss';
 const transitionSpeed = 0.7
 
 export const DrawerWrapper = styled.div<{isOpen: boolean}>`
-transition: transform ${transitionSpeed}s ease;
+    transition: transform ${transitionSpeed}s ease;
     background-color: ${colors.white};
     max-width: 400px;
     width: 100%;
@@ -14,12 +14,16 @@ transition: transform ${transitionSpeed}s ease;
     overflow: auto;
     position: fixed;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    transition: transform ${transitionSpeed}s ease;
-    ${({isOpen}) => isOpen && css`
-        top: 0;
-        right: 0;
-        transform: translateX(0);
-    `}
+    top: 0;
+    right: 0;
+    transform: translateZ(0);
+    transition: all ${transitionSpeed}s ease;
+    ${({isOpen}) => isOpen ?
+        
+        `transform: translateX(0);
+         box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        ` : 
+        'transform: translateX(120%)'}
 `;
 
 export const Backdrop = styled.div<{isOpen: boolean}>`

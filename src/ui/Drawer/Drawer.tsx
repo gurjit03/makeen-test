@@ -7,13 +7,6 @@ interface DrawerProps {
     children: React.ReactChild
 }
 
-
-const createPortalRoot = () => {
-    const drawerRoot = document.createElement('div');
-    drawerRoot.setAttribute('id', 'drawer-root');
-    return drawerRoot;
-}
-
 const Drawer: React.FC<DrawerProps> = (props) => {
     const {
         isOpen,
@@ -21,14 +14,10 @@ const Drawer: React.FC<DrawerProps> = (props) => {
         children
     } = props;
     const bodyRef = React.useRef<HTMLElement>(document.querySelector('body'));
-    const portalRootRef = React.useRef<HTMLElement>(document.getElementById('drawer-root') || createPortalRoot());
+
 
     React.useEffect(() => {
         const bodyEl = bodyRef.current;
-        const portalEl = portalRootRef.current;
-        if (bodyEl) {
-            bodyEl.appendChild(portalEl);
-        }
 
         const updatePageScroll = () => {
             if (bodyEl) {
@@ -42,7 +31,6 @@ const Drawer: React.FC<DrawerProps> = (props) => {
         updatePageScroll();
 
         return () => {
-            portalEl.remove();
             if (bodyEl) {
                 bodyEl.style.overflow = ''
             }
@@ -53,12 +41,11 @@ const Drawer: React.FC<DrawerProps> = (props) => {
         <div>
             <DrawerWrapper
                 isOpen={isOpen}
-                aria-hidden={isOpen ? "false" : "true"}
             >
                 {children}
 
             </DrawerWrapper>
-            <Backdrop isOpen={isOpen} onClick={onClose} />
+            <Backdrop role='button' isOpen={isOpen} onClick={onClose} />
         </div>
     )
 }
