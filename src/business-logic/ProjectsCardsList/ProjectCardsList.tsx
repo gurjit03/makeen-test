@@ -25,7 +25,6 @@ const ProjectCardsList: React.FC = () => {
     }
 
     const isFetchingData = status === 'fetching';
-    console.log(projects, 'PROJECTS>..')
 
     return (
         <>
