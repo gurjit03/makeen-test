@@ -33,6 +33,12 @@ export const ProjectStatus = styled.p<{color: string}>`
     margin-bottom: ${verticalSpacing * 2}px;
 `;
 
+export const ProjectDescription = styled.p`
+    overflow: hidden;
+    max-width: 200px;
+    max-height: 80px;
+`;
+
 export const ProjectEndDuration = styled.p`
     font-weight: 800;
 `;

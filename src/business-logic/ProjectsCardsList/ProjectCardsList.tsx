@@ -1,12 +1,12 @@
 import React from 'react';
-import ProjectCardsList from '../../components/ProjectCardsList/ProjectCardsList'
+import ProjectCardsListUI from '../../components/ProjectCardsList/ProjectCardsList'
 import { API_URL } from '../../config/app';
 
 import { Project } from '../../interfaces/Project.interface';
-import { Drawer } from '../../ui/';
-import { ProjectCardsWrapper } from './ProjectCardsListContainer.style';
+import { Drawer } from '../../ui';
+import { ProjectCardsWrapper } from './ProjectCardsList.style';
 
-const ProjectCardsListContainer: React.FC = () => {
+const ProjectCardsList: React.FC = () => {
     const [showProjectDrawer, setShowProjectDrawer] = React.useState<boolean>(false);
     const [projectId, setProjectId] = React.useState<string>('');
     const [isLoading, setIsLoading] = React.useState<boolean>(false);
@@ -42,11 +42,11 @@ const ProjectCardsListContainer: React.FC = () => {
             <ProjectCardsWrapper>
                 {isLoading ?
                     <p>LOADING...</p> :
-                    <ProjectCardsList projects={projects} onProjectClick={handleProjectClick} />}
+                    <ProjectCardsListUI projects={projects} onProjectClick={handleProjectClick} />}
             </ProjectCardsWrapper>
             <Drawer isOpen={showProjectDrawer} onClose={handleDrawerClose}>HELP</Drawer>
         </>
     )
 }
 
-export default ProjectCardsListContainer
+export default ProjectCardsList
