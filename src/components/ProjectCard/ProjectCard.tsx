@@ -19,6 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
         onActionClick
     } = props;
     const projectStatusColor = getColorsForStatus(status);
+
     return (
         <Wrapper>
             <ProjectName>{name}</ProjectName>

@@ -28,7 +28,7 @@ export const ProjectName = styled.h2`
 `;
 
 export const ProjectStatus = styled.p<{color: string}>`
-    color: ${({color}) => color}
+    color: ${({color}) => color};
     font-weight: 800;
     margin-bottom: ${verticalSpacing * 2}px;
 `;
