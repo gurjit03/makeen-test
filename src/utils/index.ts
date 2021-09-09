@@ -1,2 +1,2 @@
-export {getColorsForStatus} from './getColorsForStatus';
-export {getProperDate} from './getProperDate'
+export { getColorsForStatus } from './getColorsForStatus'
+export { getProperDate } from './getProperDate'
