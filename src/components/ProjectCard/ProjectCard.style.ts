@@ -7,7 +7,6 @@ export const Wrapper = styled.article`
     border: 2px solid ${colors.accent};
     background-color: ${colors.white};
     max-width: 200px;
-    max-height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,9 +28,15 @@ export const ProjectName = styled.h2`
 `;
 
 export const ProjectStatus = styled.p<{color: string}>`
-    color: ${({color}) => color}
+    color: ${({color}) => color};
     font-weight: 800;
     margin-bottom: ${verticalSpacing * 2}px;
+`;
+
+export const ProjectDescription = styled.p`
+    overflow: hidden;
+    max-width: 200px;
+    max-height: 80px;
 `;
 
 export const ProjectEndDuration = styled.p`

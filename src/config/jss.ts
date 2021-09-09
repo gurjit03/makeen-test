@@ -24,5 +24,6 @@ export const colors =  {
     secondary: '#97EBAA',
     tertiary: '#C133DB',
     accent: '#2C321C',
-    white: '#ffffff'
+    white: '#ffffff',
+    grey: '#e5e4e2'
 }
