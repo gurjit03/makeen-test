@@ -18,8 +18,8 @@ const useFetch = <T = unknown>(url?: string, options?: RequestInit) => {
 
 			// If a cache exists for this url, return it
 			if (cache.current[url]) {
-				const data = cache.current[url]
-				setData(data)
+				const res = cache.current[url]
+				setData(res)
 				setStatus('fetched')
 			}
 
@@ -29,9 +29,9 @@ const useFetch = <T = unknown>(url?: string, options?: RequestInit) => {
 					throw new Error(response.statusText)
 				}
 
-				const data = (await response.json()) as T
-				cache.current[url] = data
-				setData(data)
+				const res = (await response.json()) as T
+				cache.current[url] = res
+				setData(res)
 				setStatus('fetched')
 			} catch (error) {
 				setStatus('error')

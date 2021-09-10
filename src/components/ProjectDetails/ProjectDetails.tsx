@@ -15,7 +15,7 @@ import {
 	ProjectName,
 	ProjectConsultants,
 	Wrapper,
-} from '../ProjectDetails/ProjectDetails.style'
+} from './ProjectDetails.style'
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = props => {
 	const { name, status, duration, description, consultants = [] } = props

@@ -5,6 +5,7 @@ import { Wrapper } from './ProjectCardsList.style'
 
 interface ProjectCardsListProps {
 	projects: Project[] | []
+	// eslint-disable-next-line no-unused-vars
 	onProjectClick: (projectId: string) => () => void
 }
 
