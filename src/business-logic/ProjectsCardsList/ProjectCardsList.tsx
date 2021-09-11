@@ -15,8 +15,8 @@ const ProjectCardsList: React.FC = () => {
 	const PROJECTS_API_URL = `${API_URL}/projects`
 	const { data: projects, status } = useFetch<Project[]>(PROJECTS_API_URL)
 
-	const handleProjectClick = (projectId: string) => () => {
-		setProjectId(projectId)
+	const handleProjectClick = (pId: string) => () => {
+		setProjectId(pId)
 		setShowProjectDrawer(true)
 	}
 

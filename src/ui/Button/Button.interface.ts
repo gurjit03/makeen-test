@@ -1,3 +1,5 @@
+import React from 'react'
+
 export type Variant = 'contained' | 'outlined'
 export type Color = 'primary' | 'secondary'
 

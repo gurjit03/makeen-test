@@ -6,9 +6,9 @@ interface ConsultantProps extends IConsulant {
 	wrapperComponent?: React.FC
 }
 
-const ConsultantWrapper: React.FC = ({ children }) => {
-	return <CWrapper>{children}</CWrapper>
-}
+const ConsultantWrapper: React.FC = ({ children }) => (
+	<CWrapper>{children}</CWrapper>
+)
 
 const Consultant: React.FC<ConsultantProps> = props => {
 	const {

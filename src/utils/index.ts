@@ -1,2 +1,2 @@
-export { getColorsForStatus } from './getColorsForStatus'
-export { getProperDate } from './getProperDate'
+export { default as getColorsForStatus } from './getColorsForStatus'
+export { default as getProperDate } from './getProperDate'
