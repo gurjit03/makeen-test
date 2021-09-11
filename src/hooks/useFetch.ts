@@ -4,7 +4,7 @@ interface Cache<T> {
 	[url: string]: T
 }
 
-const useFetch = <T = unknown>(url?: string, options?: RequestInit) => {
+const useFetch = <T = unknown>(url?: string, options?: any) => {
 	const [status, setStatus] = useState<string>('')
 	const [data, setData] = useState<T | null>(null)
 	const cache = useRef<Cache<T>>({})

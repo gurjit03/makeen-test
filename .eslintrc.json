@@ -34,7 +34,8 @@
 			2,
 			{ "extensions": [".js", ".jsx", ".ts", ".tsx"] }
 		],
-		"import/prefer-default-export": 0
+		"import/prefer-default-export": 0,
+		"@typescript-eslint/no-unused-vars": "off"
 	},
 	"settings": {
 		"import/parsers": {
