@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { colors, verticalSpacing } from '../../config/jss'
-import { Button as ButtonProps, Variant } from './Button.interface'
+import { Button as ButtonProps } from './Button.interface'
 
 const variantOptions: any = {
 	contained: {

@@ -5,7 +5,7 @@ export const consultant1: Consultant = {
 		"https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light'",
 	id: '1',
 	firstName: 'john',
-	lastName: 'doe',
+	lastName: 'doe1',
 }
 
 export const consultant2: Consultant = {

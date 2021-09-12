@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectDetails /> should render properly 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-jrAFXE ewGNMM"
+  >
+    <p
+      class="sc-gKseQn beAyqj"
+      color="#3CA6E6"
+    >
+      running
+    </p>
+    <h2
+      class="sc-iqHYmW bjKVDm"
+    >
+      john doe
+    </h2>
+    <div
+      class="sc-dQoVA iRPZOA"
+    >
+      <h3
+        class="sc-crrszt jRwIeB"
+      >
+        Duration
+      </h3>
+      <div
+        class="sc-eCstlR ejPDsS"
+      >
+        <p>
+          11.9.21
+        </p>
+         to 
+        <p
+          class="sc-fubCzh dcoLlf"
+        >
+          11.9.21
+        </p>
+      </div>
+    </div>
+    <div
+      class="sc-dQoVA iRPZOA"
+    >
+      <h3
+        class="sc-crrszt jRwIeB"
+      >
+        Description
+      </h3>
+      <p
+        class="sc-bqyKOL fwwEzA"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div
+      class="sc-dQoVA iRPZOA"
+    >
+      <h3
+        class="sc-crrszt jRwIeB"
+      >
+        Consultants
+      </h3>
+      <ul
+        class="sc-kstqJO jRmbKI"
+      >
+        <li
+          class="sc-bdfBQB dSprCg"
+        >
+          <img
+            class="sc-gsTEea dtNHVy"
+            src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light'"
+          />
+          <p
+            class="sc-dlfnuX iHPnGy"
+          >
+            john doe1
+          </p>
+        </li>
+        <li
+          class="sc-bdfBQB dSprCg"
+        >
+          <img
+            class="sc-gsTEea dtNHVy"
+            src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light'"
+          />
+          <p
+            class="sc-dlfnuX iHPnGy"
+          >
+            john doe2
+          </p>
+        </li>
+        <li
+          class="sc-bdfBQB dSprCg"
+        >
+          <img
+            class="sc-gsTEea dtNHVy"
+            src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light'"
+          />
+          <p
+            class="sc-dlfnuX iHPnGy"
+          >
+            john doe3
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;
