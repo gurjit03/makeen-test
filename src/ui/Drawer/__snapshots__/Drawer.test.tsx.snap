@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Drawer /> should render properly 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="sc-bdfBQB Pynap"
+    >
+      content
+    </div>
+    <div
+      aria-pressed="false"
+      class="sc-gsTEea bMysJp"
+      role="button"
+    />
+  </div>
+</DocumentFragment>
+`;

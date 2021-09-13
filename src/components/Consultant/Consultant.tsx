@@ -20,7 +20,7 @@ const Consultant: React.FC<ConsultantProps> = props => {
 	const name = `${firstName} ${lastName}`
 	return (
 		<Wrapper>
-			<CAvatar src={avatar} />
+			<CAvatar alt="avatar" src={avatar} />
 			<CName>{name}</CName>
 		</Wrapper>
 	)

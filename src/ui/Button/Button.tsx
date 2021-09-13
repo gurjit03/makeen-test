@@ -4,7 +4,7 @@ import { Button as ButtonProps } from './Button.interface'
 
 const Button: React.FC<ButtonProps> = props => {
 	const { children, ...rest } = props
-	return <Wrapper {...rest}>{children}</Wrapper>
+	return <Wrapper data-testid="button" {...rest}>{children}</Wrapper>
 }
 
 export default Button

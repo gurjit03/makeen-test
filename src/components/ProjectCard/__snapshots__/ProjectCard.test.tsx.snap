@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectCard /> should render properly 1`] = `
+<DocumentFragment>
+  <article
+    class="sc-bdfBQB floGhh"
+  >
+    <h2
+      class="sc-dlfnuX eimhgL"
+    >
+      john doe
+    </h2>
+    <p
+      class="sc-hKgJUU SMLVg"
+      color="#3CA6E6"
+    >
+      running
+    </p>
+    <div
+      class="sc-gsTEea ezBYqA"
+    >
+      <p>
+        11.9.21
+      </p>
+       to 
+      <p
+        class="sc-jSgvzq gbgGMA"
+      >
+        11.9.21
+      </p>
+    </div>
+    <p
+      class="sc-eCstlR gWgnLP"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <div
+      class="sc-gKseQn laNytO"
+    >
+      <button
+        class="sc-iBPTik bDICib"
+        color="primary"
+        data-testid="button"
+      >
+        view
+      </button>
+    </div>
+  </article>
+</DocumentFragment>
+`;

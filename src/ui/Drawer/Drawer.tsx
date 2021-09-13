@@ -8,7 +8,7 @@ interface DrawerProps {
 }
 
 const Drawer: React.FC<DrawerProps> = props => {
-	const { isOpen, onClose = () => {}, children } = props
+	const { isOpen, onClose = () => { }, children } = props
 	const bodyRef = React.useRef<HTMLElement>(document.querySelector('body'))
 
 	React.useEffect(() => {
@@ -35,7 +35,7 @@ const Drawer: React.FC<DrawerProps> = props => {
 	return (
 		<div>
 			<DrawerWrapper isOpen={isOpen}>{children}</DrawerWrapper>
-			<Backdrop role='button' isOpen={isOpen} onClick={onClose} />
+			<Backdrop role='button' aria-pressed="false" isOpen={isOpen} onClick={onClose} />
 		</div>
 	)
 }
