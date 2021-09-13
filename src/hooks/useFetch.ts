@@ -35,7 +35,6 @@ const useFetch = <T = unknown>(url?: string, options?: any) => {
 				setStatus('fetched')
 			} catch (error) {
 				setStatus('error')
-				setStatus('fetched')
 			}
 		}
 
