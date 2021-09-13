@@ -5,6 +5,7 @@ exports[`<Button /> should render properly 1`] = `
   <button
     class="sc-bdfBQB irKrPi"
     color="primary"
+    data-testid="button"
   >
     button
   </button>
